@@ -139,17 +139,19 @@ section {
   padding-bottom: 8px;
 }
 .fullprice {
-  font-size: 24px;
+  font-size: 29px;
   font-weight: 600;
 }
 .m2 {
-  font-size: 14px;
+  font-size: 13px;
   font-style: italic;
-  margin-bottom: 2.1px;
+  font-weight: 900;
+  margin-bottom: 5px;
 }
 .m2price {
-  font-size: 19px;
-  margin-left: 4px;
+  font-size: 18px;
+  margin-left: 5px;
+  margin-bottom: 3px;
 }
 .greybar {
   position: absolute;
