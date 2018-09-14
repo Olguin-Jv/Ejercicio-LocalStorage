@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+section {
+  width: 100%;
+  height: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.container {
+  position: relative;
+  width: 80%;
+  max-width: 875px;
+  min-width: 734px;
+  height: 250px;
+  background: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.thumbnail {
+  position: relative;
+  width: 35%;
+  height: 100%;
+  background: thistle;
+}
+.left-arrow,
+.right-arrow {
+  position: absolute;
+  width: 23px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.left-arrow i,
+.right-arrow i {
+  font-size: 40px;
+}
+.left-arrow i {
+  margin-left: 2.5px;
+}
+.left-arrow {
+  left: 0px;
+}
+.right-arrow {
+  right: 0px;
+}
+.thumbnail img {
+  display: block;
+  height: 100%;
+  width: auto;
+}
+.info {
+  position: relative;
+  width: 65%;
+  height: 100%;
+  background: red;
+}
+.description {
+  position: relative;
+  width: 100%;
+  height: 80%;
+  background: grey;
+}
+.description h1,
+.description p {
+  margin-left: 15px;
+}
+.description h1 {
+  font-size: 17px;
+}
+.price {
+  position: absolute;
+  width: 100%;
+  height: 35px;
+  bottom: 0px;
+  background: pink;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.price span {
+  margin-left: 15px;
+}
+.greybar {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 50px;
+  background: #eaeaea;
+}
