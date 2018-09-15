@@ -150,7 +150,6 @@ section {
   margin-bottom: 5px;
 }
 .address {
-  background: white;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -227,4 +226,14 @@ button {
   position: absolute;
   right: 20px;
   text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 900;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: #74bee9;
+  outline: none;
+}
+button:active {
+  color: #5b98bb;
 }
