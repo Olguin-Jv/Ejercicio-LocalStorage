@@ -1,6 +1,6 @@
 
 
-// funcion que almacena el like
+// funcion que cambia de color el corazon
 function toggleColor() {
     var corazon = document.getElementById("toggle-color");
     if (corazon.style.color == "red"){
@@ -10,22 +10,17 @@ function toggleColor() {
     }
 }
 
+//funcion que calcula el precio por metro cuadrado
 function calcularPrecioMetroCuadrado(precio, superficie) {
     var precioPorM2 = parseInt(precio)/parseInt(superficie);
-    var resultado = parseInt(precioPorM2);
+    var resultado = parseInt(precioPorM2); //le saco los decimales
     return resultado;
 }
 
-function convertirResultado(num){
-    var texto = toString(num); //aca se almacena el num
-    var largo = texto.lenght; //largo del num
-    var productoFinal = ""; //aca se concatena el resultado final
-    var contador = 2; 
-    for (var i = largo; i !== 0; --i){
-        if (contador < 2) {
-            productofinal = texto + productofinal;
-        }
-    }
+//funcion que coloca los "." debidos a la cantidad numerica
+function valorNumerico(num) {
+    var valor = parseInt(num);
+    return valor.toLocaleString();
 }
 
 var fotos = ["img/01.jpg", "img/02.jpg", "img/03.jpg"];
@@ -44,6 +39,14 @@ function nextPhoto() {
         console.log(fotoActual);
     }
 }
+
+/*
+para el slider hay que copiar el nodo,
+clonarlo
+editar el clon y modificarle el src
+reeplazar el nodo viejo con el nuevo
+voilá!
+*/
 
 function previousPhoto(){
     console.log("algo");

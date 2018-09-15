@@ -44,17 +44,25 @@
                     <p class="bio"><script>document.write(propiedad.descripcion)</script></p>
                  
                     <div class="price">
-                        <p class="fullprice"><script>document.write("U&#36;S " + propiedad.precio)</script></p>
-                        <p class="m2">$/m&#178;</p> <p class="m2price"><script>document.write(calcularPrecioMetroCuadrado(propiedad.precio, propiedad.m2))</script></p>
+                        <p class="fullprice"> <!-- precio completo de la propiedad -->
+                            <script>document.write("U&#36;S " + valorNumerico(propiedad.precio))</script>
+                        </p>
+                        <p class="m2">$/m&#178;</p><p class="m2price"> <!-- precio del valor por metro cuadrado -->
+                            <script>document.write(valorNumerico(calcularPrecioMetroCuadrado(propiedad.precio, propiedad.m2)))</script>
+                        </p>
                     </div>
                 
                 </div>
 
                 <div class="greybar">
-                    <p class="detalles"> 320  </p>
+
+                    <button>Contactar</button>
+
+                    <p class="detalles"> 320 m2 </p>
                     <p class="detalles" >3 Dormitorios</p>
                     <p class="detalles" >2 Baños</p>
                     <p class="detalles" >2 Cocheras</p>
+                    
                 </div>
 
             </div>
