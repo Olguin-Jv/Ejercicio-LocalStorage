@@ -7,27 +7,9 @@ var propiedad = {
     dormitorios: "3",
     banos: "2",
     cocheras: "2",
-    fotos: ["img/01.jpg", "img/02.jpg", "img/03.jpg"]
+    fotos: ["img/01.jpg", "img/02.jpg", "img/03.jpg"],
+    fotosIndice: 0 //de momento me las ingenio con esto
+                   // para hacer funcionar el cambio de fotos
 }
 
 
-///////////////////////////////
-
-
-// var priceContainer = document.createElement("p");
-// var priceNumber = document.createTextNode("1400000");
-// priceContainer.appendChild(priceNumber);
-// document
-
-
-// function addElement () { 
-//     // crea un nuevo div 
-//     // y añade contenido 
-//     var newDiv = document.createElement("div"); 
-//     var newContent = document.createTextNode("Hola!¿Qué tal?"); 
-//     newDiv.appendChild(newContent); //añade texto al div creado. 
-  
-//     // añade el elemento creado y su contenido al DOM 
-//     var currentDiv = document.getElementById("div1"); 
-//     document.body.insertBefore(newDiv, currentDiv);
-//   }

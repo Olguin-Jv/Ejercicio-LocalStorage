@@ -23,31 +23,32 @@ function valorNumerico(num) {
     return valor.toLocaleString();
 }
 
-var fotos = ["img/01.jpg", "img/02.jpg", "img/03.jpg"];
-var fotoActual = 0;
-
 function nextPhoto() {
-    var thumbnail = document.getElementById("fotos");
-    if (fotoActual == 2){
-        fotoActual = 0;
-        thumbnail.src = fotos[fotoactual];
-        fotoActual += 1;
-        console.log(thumbnail.src);
-    } else {
-        thumbnail.src = fotos[fotoactual];
-        fotoActual += 1;
-        console.log(fotoActual);
+    var fotoActual = document.getElementById("gallery");
+    var fotoNueva = fotoActual.cloneNode();
+    var padre = document.getElementById("gallery").parentNode;
+
+    if (propiedad.fotosIndice < propiedad.fotos.length-1){
+        propiedad.fotosIndice++ ;
+    }   else if (propiedad.fotosIndice == propiedad.fotos.length-1) {
+        propiedad.fotosIndice = 0;
     }
+    
+    fotoNueva.src = propiedad.fotos[propiedad.fotosIndice];
+    padre.replaceChild(fotoNueva, fotoActual);
 }
 
-/*
-para el slider hay que copiar el nodo,
-clonarlo
-editar el clon y modificarle el src
-reeplazar el nodo viejo con el nuevo
-voilá!
-*/
-
 function previousPhoto(){
-    console.log("algo");
+    var fotoActual = document.getElementById("gallery");
+    var fotoNueva = fotoActual.cloneNode();
+    var padre = document.getElementById("gallery").parentNode;
+
+    if (propiedad.fotosIndice > 0){
+        propiedad.fotosIndice--;
+    }   else {
+        propiedad.fotosIndice = propiedad.fotos.length-1;
+    }
+    
+    fotoNueva.src = propiedad.fotos[propiedad.fotosIndice];
+    padre.replaceChild(fotoNueva, fotoActual);
 }
