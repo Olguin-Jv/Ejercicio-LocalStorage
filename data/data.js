@@ -11,5 +11,3 @@ var propiedad = {
     fotosIndice: 0 //de momento me las ingenio con esto
                    // para hacer funcionar el cambio de fotos
 }
-
-

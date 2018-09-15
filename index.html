@@ -35,13 +35,13 @@
             <div class="info">  <!-- info de la publicación -->
                     
                <div class="description">
-
-                    <h1>Si vas a utilizar un pasaje de Lorem Ipsum, necesitás esta...</h1>
+                        <!-- título de la publicación -->
+                    <h1><script>document.write(propiedad.titulo)</script></h1>
                     <div class="address">
                         <i class="fas fa-map-marker-alt">&nbsp;&nbsp;</i>
-                        <p>Juan Francisco Seguí 3900,  Palermo Chico, Pal...</p>
+                        <p><script>document.write(propiedad.ubicacion)</script></p>
                     </div>
-                    
+                                    <!-- descripcion de la propiedad -->
                     <p class="bio"><script>document.write(propiedad.descripcion)</script></p>
                 
                     <div class="price">
@@ -57,7 +57,7 @@
 
                 <div class="greybar">
                     
-
+                    <!-- detalles de la propiedad -->
                     <p class="detalles"> <script>document.write(propiedad.m2 + " m2")</script> </p>
                     <p class="detalles"> <script>document.write(propiedad.dormitorios + " Dormitorios")</script> </p>
                     <p class="detalles"> <script>document.write(propiedad.banos + " Ba&ntilde;os")</script> </p>
@@ -68,6 +68,21 @@
             
             </div>
 
+        </div>
+
+        <div id="modal-container">
+            <div id="modal">
+                <h1>Para ser contactado por favor ingrese su dirección de correo electrónico.</h1>
+                <h5>Email</h5>
+                
+
+                <form>
+                    <input type="email" name="email" placeholder="myemail@gmail.com"><br> 
+                    <p id="mensajeDeError">Por favor ingrese un email válido</p>
+                    <input type="submit" value="enviar">
+                </form>
+                
+            </div>
         </div>
 
     </section>
