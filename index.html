@@ -19,7 +19,7 @@
 
             <div class="thumbnail"> <!--  fotos -->
 
-                <!-- <div class="destacado"><p>Super destacado</p></div>
+                <div class="destacado"><p>Super destacado</p></div>
                 
                 <div class="left-arrow"><i class="fas fa-angle-left" onclick="previousPhoto()"></i></div>
                 <div class="right-arrow"><i class="fas fa-angle-right" onclick="nextPhoto()"></i></div>
@@ -28,13 +28,14 @@
                     <i id="toggle-color" class="fas fa-heart"></i>
                 </div>
 
-                <img id="gallery" class="fotos" src="img/01.jpg" alt="foto de la propiedad"> -->
+                <img id="gallery" class="fotos" src="img/01.jpg" alt="foto de la propiedad">
 
             </div>
 
             <div class="info">  <!-- info de la publicación -->
-                
-                <!-- <div class="description">
+                    
+               <div class="description">
+
                     <h1>Si vas a utilizar un pasaje de Lorem Ipsum, necesitás esta...</h1>
                     <div class="address">
                         <i class="fas fa-map-marker-alt">&nbsp;&nbsp;</i>
@@ -42,29 +43,29 @@
                     </div>
                     
                     <p class="bio"><script>document.write(propiedad.descripcion)</script></p>
-                 
+                
                     <div class="price">
-                        <p class="fullprice">
+                        <p class="fullprice"> <!-- precio total de la propiedad -->
                             <script>document.write("U&#36;S " + valorNumerico(propiedad.precio))</script>
                         </p>
-                        <p class="m2">$/m&#178;</p><p class="m2price">
+                        <p class="m2">$/m&#178;</p><p class="m2price"> <!-- precio por metro cuadrado -->
                             <script>document.write(valorNumerico(calcularPrecioMetroCuadrado(propiedad.precio, propiedad.m2)))</script>
                         </p>
-                    </div> -->
-                
-                </div>
+                    </div>
+
+                </div>    
 
                 <div class="greybar">
+                    
 
-                    <button>Contactar</button>
-
-                    <!-- <p class="detalles"> <script>document.write(propiedad.m2 + " m2")</script> </p>
+                    <p class="detalles"> <script>document.write(propiedad.m2 + " m2")</script> </p>
                     <p class="detalles"> <script>document.write(propiedad.dormitorios + " Dormitorios")</script> </p>
                     <p class="detalles"> <script>document.write(propiedad.banos + " Ba&ntilde;os")</script> </p>
                     <p class="detalles"> <script>document.write(propiedad.cocheras + " Cocheras")</script> </p>
-                     -->
                 </div>
-
+                
+                <button>Contactar</button>
+            
             </div>
 
         </div>
