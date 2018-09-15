@@ -17,24 +17,22 @@
 
         <div class="container">
 
-            <div class="thumbnail">
+            <div class="thumbnail"> <!--  fotos -->
 
                 <div class="destacado"><p>Super destacado</p></div>
-
-                <div class="like">
-                    <i  onclick="toggleColor()" id="toggle-color" class="fas fa-heart"></i>
-                </div>
-
+                
                 <div class="left-arrow"><i class="fas fa-angle-left" onclick="previousPhoto()"></i></div>
                 <div class="right-arrow"><i class="fas fa-angle-right" onclick="nextPhoto()"></i></div>
 
+                <div class="like" onclick="toggleColor()">
+                    <i id="toggle-color" class="fas fa-heart"></i>
+                </div>
 
                 <img id="select" class="fotos" src="img/01.jpg" alt="foto de la propiedad">
 
             </div>
 
-
-            <div class="info">
+            <div class="info">  <!-- info de la publicación -->
                 
                 <div class="description">
                     <h1>Si vas a utilizar un pasaje de Lorem Ipsum, necesitás esta...</h1>
@@ -43,23 +41,27 @@
                         <p>Juan Francisco Seguí 3900,  Palermo Chico, Pal...</p>
                     </div>
                     
-                    <p class="bio">Lorem ipsum es simplemente un texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta)</p>
+                    <p class="bio"><script>document.write(propiedad.descripcion)</script></p>
                  
                     <div class="price">
-                        <p class="fullprice">U$S 1.400.000</p>
-                        <p class="m2">$/m&#178;</p> <p class="m2price">3.680</p>
+                        <p class="fullprice"><script>document.write("U&#36;S " + propiedad.precio)</script></p>
+                        <p class="m2">$/m&#178;</p> <p class="m2price"><script>document.write(calcularPrecioMetroCuadrado(propiedad.precio, propiedad.m2))</script></p>
                     </div>
                 
                 </div>
 
-                <div class="greybar"></div>
+                <div class="greybar">
+                    <p class="detalles"> 320  </p>
+                    <p class="detalles" >3 Dormitorios</p>
+                    <p class="detalles" >2 Baños</p>
+                    <p class="detalles" >2 Cocheras</p>
+                </div>
+
             </div>
 
         </div>
 
     </section>
  
-    <i  id="corazon" class="fas fa-heart"></i>
-
 </body>
 </html>

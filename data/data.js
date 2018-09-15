@@ -1,8 +1,8 @@
 var propiedad = {
     titulo: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     ubicacion: "Juan Francisco Seguí, Palermo Chico, Palermo",
-    descripción: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    precio: "1.400.000",
+    descripcion: "Lorem ipsum es simplemente un texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta)",
+    precio: "1400000",
     m2: "380",
     dormitorios: "3",
     banos: "2",
