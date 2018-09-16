@@ -76,6 +76,46 @@ function previousPhoto(){
     padre.replaceChild(fotoNueva, fotoActual);
 };
 
+
+function setearPrecio(){
+    
+    if (localStorage.getItem("precioPropiedad") == null){
+        localStorage.setItem("precioPropiedad", propiedad.precio)
+        console.log("no existe local storage\nse crea local storage\nPropiedad= "+localStorage.getItem("precioPropiedad"));
+    }
+
+    propiedad.precio = localStorage.getItem("precioPropiedad");
+    console.log("\nSe recupera el precio\nPropiedad= " +  localStorage.getItem("precioPropiedad"));
+    var nodoPadre = document.getElementById("price");                               //nodo padre
+    var nodoPrecioActual = document.getElementById("fullprice");                    //nodo hijo
+    var valor = valorNumerico( localStorage.getItem("precioPropiedad") );   //valor
+    console.log("valor es de " + valor);
+
+    /* HASTA ACÁ ESTO FUNCIONA */
+
+    /* 
+    var nodoNuevoPrecio = document.createElement("p");                              //creo nuevo p
+    nodoNuevoPrecio.setAttribute("id", "fullprice");                                //atributo id
+    nodoNuevoPrecio.appendChild(valorNumerico(valorNumerico));                      //entrego valor a p
+    console.log(valorEnPrecio);
+    */
+    
+    //nodoPadre.replaceChild(nodoNuevoPrecio, nodoPrecioActual);
+
+
+    // var texto = document.createTextNode(precioDOM);
+    // console.log(texto);
+    // precioDOM.appendChild(texto);
+
+}
+
+function cambiarPrecio(){
+    var nuevoPrecio = document.getElementById("nuevoPrecio").value;
+    localStorage.setItem("precioPropiedad", nuevoPrecio);
+    alert("precioCambiado a: " + nuevoPrecio);
+}
+
 window.onload = function(){
     setearLike();
+    setearPrecio()
 }

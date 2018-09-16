@@ -44,10 +44,8 @@
                                     <!-- descripcion de la propiedad -->
                     <p class="bio"><script>document.write(propiedad.descripcion)</script></p>
                 
-                    <div class="price">
-                        <p class="fullprice"> <!-- precio total de la propiedad -->
-                            <script>document.write("U&#36;S " + valorNumerico(propiedad.precio))</script>
-                        </p>
+                    <div id="price">
+
                         <p class="m2">$/m&#178;</p><p class="m2price"> <!-- precio por metro cuadrado -->
                             <script>document.write(valorNumerico(calcularPrecioMetroCuadrado(propiedad.precio, propiedad.m2)))</script>
                         </p>
@@ -87,5 +85,10 @@
 
     </section>
  
+    <form>
+        <input id="nuevoPrecio" type="text" placeholder="insertar precio">
+        <input type="submit" name="" id="" onclick="cambiarPrecio()">
+    </form>
+
 </body>
 </html>
