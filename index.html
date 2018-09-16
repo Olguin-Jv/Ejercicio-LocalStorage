@@ -45,7 +45,9 @@
                     <p class="bio"><script>document.write(propiedad.descripcion)</script></p>
                 
                     <div id="price">
-
+                        <p id="fullprice"> <!-- precio total de la propiedad -->
+                            <!-- <script>document.write("U&#36;S " + valorNumerico(propiedad.precio))</script> -->
+                        </p>
                         <p class="m2">$/m&#178;</p><p class="m2price"> <!-- precio por metro cuadrado -->
                             <script>document.write(valorNumerico(calcularPrecioMetroCuadrado(propiedad.precio, propiedad.m2)))</script>
                         </p>
