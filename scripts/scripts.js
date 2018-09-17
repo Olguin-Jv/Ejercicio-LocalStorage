@@ -1,6 +1,4 @@
 
-
-
 //comprueba si hay localStorage del like
 //si no lo hay lo crea
 function setearLike() {
@@ -31,12 +29,16 @@ function toggleLike() {
         localStorage.setItem("likeColor", "blue");
         corazon.style.color = "blue";
     }
-}
+};
 
 //funcion que calcula el precio por metro cuadrado
-function calcularPrecioMetroCuadrado(precio, superficie) {
+function calcularPrecioMetroCuadrado() {
+    var precio = propiedad.precio;
+    var superficie = propiedad.m2;
     var precioPorM2 = parseInt(precio)/parseInt(superficie);
-    var resultado = parseInt(precioPorM2); //le saco los decimales
+    var resultado = parseInt(precioPorM2); //se usa otra vez "parseInt" para elimminar los decimales
+    document.getElementById("m2price").innerHTML = valorNumerico(resultado);
+    console.log(resultado);
     return resultado;
 };
 
@@ -79,43 +81,32 @@ function previousPhoto(){
 
 function setearPrecio(){
     
+    //comprueba si existe localStorage del precio - si no existe se crea tomando el valor del objeto "propiedad" creado
     if (localStorage.getItem("precioPropiedad") == null){
         localStorage.setItem("precioPropiedad", propiedad.precio)
         console.log("no existe local storage\nse crea local storage\nPropiedad= "+localStorage.getItem("precioPropiedad"));
     }
 
+    //si ya existe un localStorage pasamos su valor al objeto "propiedad"
     propiedad.precio = localStorage.getItem("precioPropiedad");
-    console.log("\nSe recupera el precio\nPropiedad= " +  localStorage.getItem("precioPropiedad"));
-    var nodoPadre = document.getElementById("price");                               //nodo padre
-    var nodoPrecioActual = document.getElementById("fullprice");                    //nodo hijo
-    var valor = valorNumerico( localStorage.getItem("precioPropiedad") );   //valor
-    console.log("valor es de " + valor);
+    //console.log("\nSe recupera el precio\nPropiedad= " +  localStorage.getItem("precioPropiedad"));
 
-    /* HASTA ACÁ ESTO FUNCIONA */
-
-    /* 
-    var nodoNuevoPrecio = document.createElement("p");                              //creo nuevo p
-    nodoNuevoPrecio.setAttribute("id", "fullprice");                                //atributo id
-    nodoNuevoPrecio.appendChild(valorNumerico(valorNumerico));                      //entrego valor a p
-    console.log(valorEnPrecio);
-    */
     
-    //nodoPadre.replaceChild(nodoNuevoPrecio, nodoPrecioActual);
-
-
-    // var texto = document.createTextNode(precioDOM);
-    // console.log(texto);
-    // precioDOM.appendChild(texto);
-
-}
+    var dibujarPrecio = document.getElementById("fullprice");                           //nodo del DOM donde se dibuja el precio
+    var valor = "U&#36;S" + valorNumerico( localStorage.getItem("precioPropiedad") );   //se convierte el numero almacenado a valor monetario
+    console.log("valor es de " + valor);
+    dibujarPrecio.innerHTML = valor;                                                    //se dibuja el valor en el DOM
+};
 
 function cambiarPrecio(){
     var nuevoPrecio = document.getElementById("nuevoPrecio").value;
     localStorage.setItem("precioPropiedad", nuevoPrecio);
     alert("precioCambiado a: " + nuevoPrecio);
-}
+    //falta terminar
+};
 
 window.onload = function(){
     setearLike();
-    setearPrecio()
-}
+    setearPrecio();
+    calcularPrecioMetroCuadrado();
+};
