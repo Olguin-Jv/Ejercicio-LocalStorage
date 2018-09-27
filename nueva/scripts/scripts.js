@@ -71,8 +71,6 @@ function previousPhoto(){
 
 
 //funcion que calcula el precio por metro cuadrado
-// sólo falta corregir función para que al retornar un valor menor a 1 no entregue un 0 absoluto
-// sino que retorne valores decimales. Ej: $0.50. 
 function calcularPrecioMetroCuadrado() {
     var precio = propiedad.precio;
     var superficie = propiedad.m2;
@@ -80,10 +78,10 @@ function calcularPrecioMetroCuadrado() {
 
     if (parseInt(precioPorM2) == 0 ) {
         var resultado = precioPorM2;
-        document.getElementById("m2price").innerHTML = valorNumerico(resultado.toFixed(2));
+        document.getElementById("m2price").innerHTML = resultado.toFixed(2);
     } else {
         var resultado = parseInt(precioPorM2);                                      //se usa otra vez "parseInt" para elimminar los decimales
-        document.getElementById("m2price").innerHTML = valorNumerico(resultado);                   //se dibuja el precio en el dom
+        document.getElementById("m2price").innerHTML = resultado;                   //se dibuja el precio en el dom
     }
 
 };

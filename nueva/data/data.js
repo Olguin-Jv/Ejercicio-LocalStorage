@@ -9,6 +9,6 @@ var propiedad = {
     cocheras: "2",
     fotos: ["img/01.jpg", "img/02.jpg", "img/03.jpg"],
     fotosIndice: 0 //de momento me las ingenio con esto
-                   // para hacer funcionar el cambio de fotos ;)
+                   // para hacer funcionar el cambio de fotos
 }
 
